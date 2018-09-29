@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <title>Quicksand超炫的页面排序效果</title>
+    <style type="text/css">
+        .container{
+            margin: 0 10%;
+        }
+        #photo-nav{
+            width: 100%;
+            margin: auto;
+            text-align: center;
+            margin-bottom: 3em;
+        }
+        #photo-nav li{
+            display: inline;
+            font-size:20px;
+            line-height:25px;
+            font-weight:400;
+            padding: 5px 20px;
+            margin: 0 0.4em;
+            letter-spacing: 1px;
+            border: 2px solid #607d8b;
+
+        }
+        #photo-nav li:hover{
+            border: 2px solid #607d8b;
+            color: #607d8b;
+            font-weight: 700;
+        }
+
+        #photo-nav li.cur{
+            border: 2px solid #607d8b;
+            color: #607d8b;
+            font-weight: 700;
+        }
+
+        .image-grid li{float:left;overflow:hidden;}
+        .image-grid li img{ width:80px; height:60px;}
+    </style>
+    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>
+    <script type="text/javascript" src="js/jquery.quicksand.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            var $data=$("#stage").clone();
+            $("#photo-nav  li").click(function(){
+                $(this).addClass("cur");
+                $(this).siblings().removeClass("cur");
+                var id = $(this).attr("id");
+                if(id=="all"){
+                    var $source=$data.find("li");
+                }else{
+                    var $source=$data.find("li[class="+id+"]");
+                }
+                $("#stage").quicksand($source,{
+                    duration: 1000,
+                    attribute: 'id',
+                    easing: 'swing'
+                });
+            });
+        });
+    </script>
+</head>
+
+<body>
+
+<div class="container" >
+    <h2 class="title">photo</h2>
+    <ul id="photo-nav">
+        <li id="all" class="cur">all</li>
+        <li id="life">life</li>
+        <li id="collect">collect</li>
+    </ul>
+
+        <ul id="stage" class="image-grid">
+            <li id="id-1" class="life"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-2" class="life"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-3" class="life"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-4" class="life"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-5" class="life"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-6" class="life"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-7" class="collect"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-8" class="collect"><img src="img/contact.png" alt="photo"></li>
+            <li id="id-9" class="collect"><img src="img/contact.png" alt="photo"></li>
+
+        </ul>
+</div>
+
+
+
+</body>
+</html>

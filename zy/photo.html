@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta charset="UTF-8">
+    <title></title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content="My Profile Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template,
+Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript">
+        addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+        function hideURLbar()
+        { window.scrollTo(0,1); }
+    </script>
+    <link rel="stylesheet" href="style/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="style/icss.css" type="text/css">
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script src="js/jquery.quicksand.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/js1.js"></script>
+    <script src="js/photojs.js"></script>
+    <script src="js/jquery.scrollTo.js"></script>
+    <style type="text/css">
+        body{
+            background-color: rgba(224, 231, 243, 0.14);
+        }
+        nav{
+            background-color: rgba(255, 255, 255, 0.8);
+            position: fixed;
+            width: 100%;
+            height: 60px;
+            z-index: 999;
+            box-shadow: 0px 2px 5px lightgray;
+
+        }
+        nav h3{
+            color: #888888;
+        }
+        nav h3:hover{
+            color: #e44f47;
+        }
+        .nav2{
+            float: right;
+            margin-top:auto;
+            margin-bottom: auto;
+        }
+        .breadcrumb{
+            background: rgba(255,1,1,0);
+            margin-bottom: 10px;
+            margin-top: 10px;
+
+        }
+        nav li{
+
+        }
+        .title{
+            margin-top: 80px;
+            margin-bottom: 10px;
+            padding-left: 10px;
+            color: #444444;
+        }
+        li:hover{
+            color: #44aee7;
+        }
+        .cur2{
+            color: #44aee7;
+        }
+        .modal-photo{
+            margin: 1em auto;
+            width: 70%;
+        }
+        .aaa h4{
+            font-size: 40px;
+            padding: 10px 10px;
+            color: #000000;
+        }
+        .aaa img{
+            float: right;
+            width: 50px;
+            opacity: 0.7;
+        }
+        .modal-img{
+            width: 100%;
+            padding: 5px;
+
+        }
+    </style>
+    <script>
+        $(function(){
+            var $data=$("#stage2").clone();
+            $("#photo2-nav  li").click(function(){
+                $(this).addClass("cur2");
+                $(this).siblings().removeClass("cur2");
+                var id = $(this).attr("id");
+                if(id=="all2"){
+                    var $source=$data.find("li");
+                }else{
+                    var $source=$data.find("li[class="+id+"]");
+                }
+                $("#stage2").quicksand($source,{
+                    duration: 1000,
+                    attribute: 'id',
+                    easing: 'swing'
+                });
+            });
+        });
+    </script>
+</head>
+<body>
+<nav>
+    <a href="index.html" class="brand"><h3>Z-YOUNG</h3></a>
+    <div class="nav2">
+        <ol class="breadcrumb" id="nav2">
+            <li>ME</li>
+            <li>SKILL</li>
+            <li>LINE</li>
+            <li>PHOTO</li>
+            <li>VIDEO</li>
+            <li>HAVE FUN</li>
+            <li>CONTACT</li>
+        </ol>
+    </div>
+
+    <div class="clearfix"></div>
+</nav>
+<section>
+    <div class="container">
+        <h2 class="title">photo</h2>
+        <ol id="photo2-nav" class="breadcrumb">
+            <li id="all2" class="cur2">all</li>
+            <li id="life">life</li>
+            <li id="collect">collect</li>
+            <li id="ps">ps</li>
+
+        </ol>
+        <div>
+            <ul id="stage" class="photo-show">
+                <li id="id-1" class="life">
+                    <a  data-toggle="modal" data-target="#myModal">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-2" class="ps">
+                    <a  data-toggle="modal" data-target="#myModal2">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-3" class="collect">
+                    <a  data-toggle="modal" data-target="#myModal3">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-4" class="life">
+                    <a  data-toggle="modal" data-target="#myModal4">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal4" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-5" class="collect">
+                    <a  data-toggle="modal" data-target="#myModal5">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal5" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-6" class="life">
+                    <a  data-toggle="modal" data-target="#myModal6">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal6" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-7" class="collect">
+                    <a  data-toggle="modal" data-target="#myModal7">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal7" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-8" class="life">
+                    <a  data-toggle="modal" data-target="#myModal8">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal8" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-9" class="ps">
+                    <a  data-toggle="modal" data-target="#myModal9">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal9" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-10" class="ps">
+                    <a  data-toggle="modal" data-target="#myModal9">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal10" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-11" class="ps">
+                    <a  data-toggle="modal" data-target="#myModal9">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal11" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <li id="id-12" class="ps">
+                    <a  data-toggle="modal" data-target="#myModal9">
+                        <figure>
+                            <img class="photo-show-img" src="img/bg2.jpg" alt="photo">
+                            <figcaption>
+                                <h3>OPULENT</h3>
+                            </figcaption>
+                        </figure>
+                    </a>
+                    <div class="modal fade" id="myModal12" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+
+                        <div class="modal-photo">
+                            <div class="aaa">
+                                <img src="img/delete.png" class="close" data-dismiss="modal" aria-hidden="true">
+                                <h4>PHOTO</h4>
+                                <div class="clearfix"></div>
+                            </div>
+                            <img class="modal-img" src="img/bg2.jpg">
+                        </div>
+                    </div>
+                </li>
+                <div class="clearfix"></div>
+            </ul>
+        </div>
+    </div>
+</section>
+</body>
+</html>

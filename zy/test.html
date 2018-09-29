@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="style/bootstrap.min.css" type="text/css">
+
+    <script src="js/jquery-3.2.1.min.js"></script>
+
+    <script src="js/bootstrap.min.js"></script>
+
+    <style type="text/css">
+        .a{
+            height: 1000px;
+        }
+        .container-fluid{
+            margin: 0 10%;
+        }
+
+        .skill-list{
+            list-style: none;
+            padding-bottom: 3em;
+        }
+        .skill-list_item{
+            position: relative;
+            margin-bottom: 20px;
+            width: 0;
+        }
+        .skill-list_item-mastered .skill-list_item_name{
+            background-color: #d6efff;
+            color: #44aee7;
+            border-color:  #3498db;
+        }
+        .page{}
+        .skill-list_item-html{width: 100%;-webkit-animation:skill-list_item-html 1s ease-in-out;}
+
+        .skill-list_item-js{width: 90%;-webkit-animation:skill-list_item-js 1s ease-in-out;}
+        .skill-list_item-java{width: 80%;-webkit-animation:skill-list_item-java 1s ease-in-out;}
+
+        @-webkit-keyframes skill-list_item-html{
+            from{width: 0}
+            to{width: 100%}
+        }
+        @-webkit-keyframes skill-list_item-js{
+            from{width: 0}
+            to{width: 90%}
+        }
+        @-webkit-keyframes skill-list_item-java{
+            from{width: 0}
+            to{width: 80%}
+        }
+
+        .skill-list_item_name{
+            padding-left: 10px;
+            background-color: #fff6dd;
+            height: 40px;
+            color: #ff742a;
+            line-height: 40px;
+            border-left: 3px solid;
+            border-color:  #fdbc40;
+        }
+
+        .skill-list_item-practised .skill-list_item_name{
+            background-color: #eaf6d0;
+            color: #6e9c0f;
+            border-color:#80bd01;
+        }
+        .skill-list_item:hover .skill-list_item_detail {
+            display: block;
+            font-size: 0.875em;
+        }
+        .list{
+            text-align: justify;
+            -webkit-margin-before: 0px;
+            -webkit-margin-after: 0px;
+            -webkit-margin-start: 0px;
+            -webkit-margin-end: 0px;
+            -webkit-padding-start: 30px;
+            line-height: 1.7;
+            display: block;
+        }
+        .skill-list_item_detail {
+            position: absolute;
+            left: 150px;
+            top: 12px;
+            z-index: 9999;
+            max-width: 400px;
+            padding: 10px;
+            background: rgba(255, 255, 255, 0.8);
+            box-shadow: 0 0 3px rgba(0, 0, 0, 0.2);
+            border-radius: 4px;
+            display: none;
+        }
+
+
+    </style>
+    <script type="text/javascript">
+        var eTop=$("#qq").offset().top;//橙色容器距离整个页面顶部的距离
+        var wTop=$(window).height();//绿色框可视区域的高度
+        window.onresize=function(){
+            var wTop=$(window).height();//缩放窗口这个高度会改变，需要再取得
+        }
+        $(window).scroll(function(){
+            var dTop = $(document).scrollTop();//绿色框可视区域上面到黑色页面顶部的距离，会实时改变
+            if(dTop+wTop > eTop) {//动画播放事件}
+                $("#a").addClass("page");
+                $("#b").addClass("page");
+                $("#c").addClass("page");
+
+            }
+        })
+
+
+    </script>
+</head>
+<body>
+<div class="a"></div>
+<div class="container-fluid" id="qq">
+    <h2 class="title">My Skills</h2>
+    <div class="my-skills">
+        <ul class="skill-list">
+            <li class="skill-list_item skill-list_item-html skill-list_item-mastered" id="a">
+                <div  class="skill-list_item_name">
+                    <span>
+                        HTML&CSS
+                    </span>
+                    <span>Proficiency in HTML5 and CSS3 styles and attributes, with web development experience</span></div>
+
+            </li>
+            <li class="skill-list_item skill-list_item-js skill-list_item-mastered" id="b">
+                <h4 class="skill-list_item_name">javascript</h4>
+                <div class="skill-list_item_detail faded">
+                    <ul class="list">
+                        <li>精通原生Javascript，能脱离jQuery等类库编码;</li>
+                        <li>能运用模块化、面向对象的方式编程；</li>
+                        <li>熟悉正则表达式的使用；</li>
+                        <li>编写过功能全面的Javascript基础类库。</li>
+                    </ul>
+                </div>
+            </li>
+
+            <li class="skill-list_item skill-list_item-java skill-list_item-practised" id="c">
+                <h4 class="skill-list_item_name">java/c/c++</h4>
+                <div class="skill-list_item_detail faded">
+                    <ul class="list">
+                        <li>能根据前端业务需求开发对应的辅助工具；</li>
+                        <li>熟悉基于Express框架的Web开发。</li>
+                    </ul>
+                </div>
+            </li>
+
+
+        </ul>
+    </div>
+</div>
+</body>
+</html>
